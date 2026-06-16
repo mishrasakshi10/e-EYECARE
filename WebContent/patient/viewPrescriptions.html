@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Prescriptions - e-EYECARE</title>
+    <link rel="stylesheet" href="viewPrescriptions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- Top Header -->
+    <div class="top-bar">
+        <h2>My Prescriptions</h2>
+
+        <div class="top-buttons no-print">
+           <button onclick="printPage()" class="btn print-btn">
+                <i class="fa fa-print"></i> Print
+           </button>
+
+            <a href="dashboard.html" class="btn back-btn">Back</a>
+        </div>
+    </div>
+
+    <!-- Prescription Content -->
+    <div id="prescriptionContainer"></div>
+
+</div>
+
+<script src="viewPrescriptions.js"></script>
+</body>
+</html>

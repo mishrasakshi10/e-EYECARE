@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e-EYECARE Login</title>
+    <link rel="stylesheet" href="log_style.css">
+</head>
+<body>
+
+<div class="window">
+
+    <!-- Title Bar -->
+    <div class="titlebar">
+        <div class="left">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="title">e-EYECARE: Online Eye Clinic System</div>
+        <div class="right">
+            
+            <span class="btn">✕</span>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>e-EYECARE: Online Eye Clinic System</h1>
+
+        <div class="login-box">
+            <h2>Login</h2>
+
+            <div class="login-body">
+               <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="avatar">
+
+                <!-- Error Message -->
+                <p id="msg" style="color:red;"></p>
+
+                <!-- Login Form -->
+                <form class="form" action="/e-EYECARES/LoginServlet" method="post" onsubmit="return validateForm()">
+                   <label for="username">Email or Contact</label>
+<input type="text" id="username" name="username" 
+       placeholder="Enter email or contact number">
+
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password">
+
+                    <div class="forgot">
+    <a href="forgotPassword.html">Forgot Password?</a>
+</div>
+
+                    <div class="buttons">
+                        <button type="submit" class="login-btn">Login</button>
+                        <button type="reset" class="clear-btn">Clear</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <p class="quote">“We care for the windows to your world.”</p>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const closeBtn = document.querySelector(".titlebar .btn");
+
+    closeBtn.addEventListener("click", () => {
+        const confirmExit = confirm("Are you sure you want to go back to Registration page?");
+
+        if (confirmExit) {
+            window.location.href = "register.html"; 
+            
+            
+        }
+    });
+});
+
+
+// Validate empty fields only
+function validateForm() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const msg = document.getElementById("msg");
+
+    if(username === "" || password === "") {
+        msg.innerHTML = "Please enter email/contact and password";
+        return false;
+    }
+    return true;
+}
+
+
+// Show error from servlet redirect
+const params = new URLSearchParams(window.location.search);
+const msg = document.getElementById("msg");
+if (params.get("error") === "invalid") {
+    msg.innerHTML = "Invalid email or password";
+} else if (params.get("error") === "invalidRole") {
+    msg.innerHTML = "Role not recognized";
+} else if (params.get("error") === "exception") {
+    msg.innerHTML = "Server error. Try again later";
+}
+</script>
+
+</body>
+</html>

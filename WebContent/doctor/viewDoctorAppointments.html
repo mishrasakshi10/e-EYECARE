@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Appointments | e-EYECARE</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="viewDoctorAppointments.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>
+        <i class="fa-solid fa-calendar-check"></i>
+        Patient Appointments
+    </h2>
+
+    <table id="apptTable">
+       <thead>
+    <tr>
+        <th>Appointment ID</th> <!-- ADD THIS -->
+        <th>Patient Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Problem</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+        <tbody id="apptBody">
+            <tr><td colspan="6">Loading appointments...</td></tr>
+        </tbody>
+    </table>
+
+    <a href="dashboard.html" class="back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+    </a>
+
+</div>
+
+<script src="viewDoctorAppointments.js"></script>
+
+</body>
+</html>

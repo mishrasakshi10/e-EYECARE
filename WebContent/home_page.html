@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-EYECARE:Online Eye Clinic System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  <div class="logo">👁️ e-EYECARE</div>
+
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a href="login.html" class="login-btn">Login</a>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Vision, Our Mission</h1>
+      <p>Book appointments, consult eye specialists, and get e-prescriptions — all online.</p>
+      <a href="register.html" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="card">
+        <i class="fa-solid fa-eye"></i>
+        <h3>Eye Checkup</h3>
+        <p>Comprehensive eye testing and digital reports.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-user-doctor"></i>
+        <h3>Online Appointment Booking</h3>
+        <p>Book appointments to our expert ophthalmologists anytime, anywhere.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-file-medical"></i>
+        <h3>e-Prescription</h3>
+        <p>Get prescriptions and reports instantly after consultation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors" class="doctors">
+    <h2>Our Specialists</h2>
+    <div class="doctor-list">
+      <div class="doctor-card">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Doctor">
+        <h3>Dr. Khushi Yadav</h3>
+        <p>Ophthalmologist</p>
+      </div>
+      <div class="doctor-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Doctor">
+        <h3>Dr. Khushboo Pal</h3>
+        <p>Eye Surgeon</p>
+      </div>
+    </div>
+  </section>
+
+
+<section class="testimonials">
+  <h2>What Our Patients Say</h2>
+
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>"Very easy to book appointment and great doctors."</p>
+      <h4>- Rahul Sharma</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"Saved my time. Online consultation is very helpful."</p>
+      <h4>- Priya Singh</h4>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  
+  <div class="contact-info">
+    <p><i class="fa-solid fa-envelope"></i> mishrasakshi61049@gmail.com</p>
+    <p><i class="fa-solid fa-phone"></i> +91 9004112545</p>
+    <p><i class="fa-solid fa-location-dot"></i> Nalasopara East, Mumbai, Maharashtra, India</p>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 e-EYECARE:Online Eye Clinic System. All Rights Reserved.</p>
+  </footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+
+      // Apply smooth scroll ONLY for section links
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

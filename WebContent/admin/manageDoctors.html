@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Doctors | Admin</title>
+    <link rel="stylesheet" href="manageDoctors.css">
+    <script src="manageDoctors.js" defer></script>
+</head>
+<body>
+
+<div class="header">
+    <h2>Manage Doctors</h2>
+    <input type="text" id="searchInput"
+           placeholder="Search Doctor..."
+           onkeyup="searchDoctor()">
+</div>
+
+<div id="doctorContainer" class="doctor-grid">
+    <!-- Cards will load here -->
+</div>
+
+<!-- View Modal -->
+<div id="viewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="doctorDetails"></div>
+    </div>
+</div>
+
+</body>
+</html>

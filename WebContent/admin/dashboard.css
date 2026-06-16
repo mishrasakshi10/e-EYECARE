@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f6;
+    color: #2c3e50;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d6efd;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.header-left h1 { margin: 0; font-size: 28px; }
+.header-left .tagline { font-size: 14px; opacity: 0.9; margin-left: 5px; }
+.header-right { display: flex; align-items: center; gap: 15px; }
+
+.logout-btn {
+    background: #dc3545;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.logout-btn:hover { background: #c82333; }
+
+/* STATISTICS CARDS */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 20px;
+}
+
+.stat-card {
+    background: #fff;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    color: #0d6efd;
+    margin: 10px 0 5px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* MAIN MANAGEMENT CARDS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 10px 0 8px;
+    font-size: 18px;
+    color: #0d6efd;
+}
+
+.card p { font-size: 14px; color: #555; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .stats-container, .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

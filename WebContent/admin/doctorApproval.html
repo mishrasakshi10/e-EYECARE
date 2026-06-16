@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Approval | e-EYECARE</title>
+    <link rel="stylesheet" href="doctorApproval.css">
+
+    <script src="doctorApproval.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h2>Pending Doctor Approvals</h2>
+        <input type="text" id="searchInput" placeholder="Search doctor...">
+    </div>
+
+    <table id="doctorTable">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Experience</th>
+                <th>Fee</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<!-- Modal -->
+<div id="doctorModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+</body>
+</html>

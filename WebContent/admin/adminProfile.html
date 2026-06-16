@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Profile | e-EYECARE</title>
+
+    <link rel="stylesheet" href="adminProfile.css">
+    <script src="adminProfile.js" defer></script>
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <h2>e-EYECARE</h2>
+        <span>Admin Panel</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li class="active"><a href="adminProfile.html">My Profile</a></li>
+        <li><a href="manageDoctors.html">Manage Doctors</a></li>
+        <li><a href="managePatients.html">Manage Patients</a></li>
+        <li><a href="manageAppointments.html">Manage Appointments</a></li>
+        <li><a href="managePrescriptions.html">Manage Prescriptions</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-content">
+
+    <header class="top-bar">
+        <div class="welcome-text">
+            Welcome, <span id="nameHeader">Admin</span>
+        </div>
+
+        <div>
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+                Dark Mode
+            </label>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-card">
+
+            
+
+            <div class="profile-right">
+                <h2 id="name">Loading...</h2>
+
+                <div class="info-group">
+                    <label>Email</label>
+                    <p id="email">Loading...</p>
+                </div>
+
+                <div class="info-group">
+                    <label>Phone</label>
+                    <p id="phone">Loading...</p>
+                </div>
+
+                <div class="info-group">
+                    <label>Role</label>
+                    <p id="role">Admin</p>
+                </div>
+
+                <div class="button-group">
+                    <button class="primary-btn" onclick="changePassword()">Change Password</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

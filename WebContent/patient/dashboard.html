@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Patient Dashboard - e-EYECARE</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h2>e-EYECARE Patient Dashboard</h2>
+
+    <div class="user-info">
+        <span id="welcomeUser">Welcome, Patient</span>
+        <button type="button" onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <div class="card" onclick="openPage('patient/bookAppointments.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+        <h3>Book Appointment</h3>
+        <p>Schedule new eye checkup appointment</p>
+    </div>
+
+    <div class="card" onclick="openPage('patient/viewAppointments.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png">
+        <h3>My Appointments</h3>
+        <p>View appointment history and status</p>
+    </div>
+
+    <div class="card" onclick="openPage('patient/viewPrescriptions.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
+        <h3>Prescriptions</h3>
+        <p>View doctor prescriptions</p>
+    </div>
+
+    <div class="card" onclick="openPage('patient/patientProfile.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png">
+        <h3>My Profile</h3>
+        <p>View and update personal details</p>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
+

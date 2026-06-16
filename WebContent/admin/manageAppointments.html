@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Appointments</title>
+    <link rel="stylesheet" href="manageAppointments.css">
+    <script src="manageAppointments.js" defer></script>
+</head>
+<body>
+
+<h2>Manage Appointments</h2>
+
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search by patient or doctor..." />
+        <button onclick="searchAppointments()">
+            🔍
+        </button>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Problem</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="appointmentTable"></tbody>
+</table>
+
+</body>
+</html>

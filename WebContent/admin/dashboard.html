@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - e-EYECARE</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-left">
+        <h1>e-EYECARE Admin</h1>
+        <span class="tagline">Manage Your Hospital Efficiently</span>
+    </div>
+    <div class="header-right">
+        <span id="welcomeAdmin">Welcome, Admin</span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<!-- STATISTICS CARDS -->
+<section class="stats-container">
+
+    <div class="stat-card">
+        <h3 id="pendingDoctors">0</h3>
+        <p>Pending Doctor Approvals</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="todaysAppointments">0</h3>
+        <p>Today's Appointments</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="totalPatients">0</h3>
+        <p>Total Patients</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="totalPrescriptions">0</h3>
+        <p>Total Prescriptions</p>
+    </div>
+
+</section>
+
+<!-- MAIN MANAGEMENT CARDS -->
+<main class="container">
+
+    <div class="card" onclick="openPage('admin/doctorApproval.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Doctor Approval">
+        <h3>Doctor Approval</h3>
+        <p>Approve or reject new doctor registrations</p>
+    </div>
+
+    <div class="card" onclick="openPage('admin/manageDoctors.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Manage Doctors">
+        <h3>Manage Doctors</h3>
+        <p>Add, update, or remove doctor accounts</p>
+    </div>
+
+    <div class="card" onclick="openPage('admin/managePatients.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Manage Patients">
+        <h3>Manage Patients</h3>
+        <p>View and manage patient accounts</p>
+    </div>
+
+    <div class="card" onclick="openPage('admin/manageAppointments.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Manage Appointments">
+        <h3>Manage Appointments</h3>
+        <p>View, update or cancel appointments</p>
+    </div>
+
+    <div class="card" onclick="openPage('admin/managePrescriptions.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" alt="Manage Prescriptions">
+        <h3>Manage Prescriptions</h3>
+        <p>View and edit doctor prescriptions</p>
+    </div>
+
+    <div class="card" onclick="openPage('admin/adminProfile.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin Profile">
+        <h3>My Profile</h3>
+        <p>Update admin personal details</p>
+    </div>
+
+</main>
+
+<!-- JS -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>

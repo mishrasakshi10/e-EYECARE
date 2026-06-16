@@ -1,0 +1,177 @@
+/* =========================
+   Patient Edit Profile CSS
+   ========================= */
+
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container to center the card */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Card styling */
+.profile-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Left side (image) */
+.profile-left {
+    flex: 1;
+    background-color: #e5e9f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.profile-left img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4a90e2;
+}
+
+.profile-left input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Right side (form) */
+.profile-right {
+    flex: 2;
+    padding: 30px;
+}
+
+.profile-right h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Info groups */
+.info-group {
+    margin-bottom: 15px;
+}
+
+.info-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.info-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #357ab8;
+}
+
+.secondary-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #999;
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .profile-card {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode .profile-left {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .info-group label {
+    color: #ccc;
+}
+
+body.dark-mode .info-group input {
+    background-color: #444;
+    border: 1px solid #666;
+    color: #eee;
+}
+
+body.dark-mode .primary-btn {
+    background-color: #5a9bf8;
+}
+
+body.dark-mode .secondary-btn {
+    background-color: #555;
+    color: #eee;
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #0b3d91;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.custom-file-upload:hover {
+    background: #092c6c;
+}
+
+.custom-file-upload:active {
+    transform: scale(0.96);
+}
+

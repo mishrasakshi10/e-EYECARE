@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Prescriptions</title>
+    <link rel="stylesheet" href="managePrescriptions.css">
+    <script src="managePrescriptions.js" defer></script>
+</head>
+<body>
+
+<h2>Manage Prescriptions</h2>
+
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" id="searchInput"
+               placeholder="Search by patient or doctor..."
+               onkeyup="searchPrescriptions()">
+        <button onclick="searchPrescriptions()">    🔍    </button>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Diagnosis</th>
+            <th>Medicines</th>
+            <th>Notes</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="prescriptionTable"></tbody>
+</table>
+
+</body>
+</html>

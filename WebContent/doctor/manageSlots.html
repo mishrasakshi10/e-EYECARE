@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manage Slots - e-EYECARE</title>
+<link rel="stylesheet" href="manageSlots.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h2>Manage Available Slots</h2>
+    <button onclick="goBack()" class="back-btn">Back</button>
+</div>
+
+<div class="slot-container">
+
+    <div class="slot-form">
+    <input type="date" id="slotDate">
+    <input type="time" id="slotTime">
+    <button onclick="addSlot()">Add Slot</button>
+    </div>
+
+    <div class="slot-list">
+        <h3>Available Slots</h3>
+        <ul id="slotList"></ul>
+    </div>
+
+</div>
+
+<script src="manageSlots.js"></script>
+</body>
+</html>

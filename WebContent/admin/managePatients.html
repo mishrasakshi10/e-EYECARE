@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Patients</title>
+    <link rel="stylesheet" href="managePatients.css">
+    <script src="managePatients.js" defer></script>
+</head>
+<body>
+
+<div class="header">
+    <h2>Manage Patients</h2>
+    <input type="text" id="searchInput"
+           placeholder="Search Patient..."
+           onkeyup="searchPatient()">
+</div>
+
+<div id="patientContainer" class="patient-grid"></div>
+
+<!-- Modal -->
+<div id="viewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="patientDetails"></div>
+    </div>
+</div>
+
+</body>
+</html>

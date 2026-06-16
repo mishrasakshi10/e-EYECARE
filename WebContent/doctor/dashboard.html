@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doctor Dashboard - e-EYECARE</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h2>e-EYECARE Doctor Dashboard</h2>
+
+   <div class="user-info">
+        <span id="welcomeDoctor">Welcome, Doctor</span>
+        <button type="button" onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <div class="card" onclick="openPage('doctor/manageSlots.html')">
+    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png">
+    <h3>Manage Slots</h3>
+    <p>Set your available time slots</p>
+    </div>
+     
+
+    <div class="card" onclick="openPage('doctor/viewDoctorAppointments.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png">
+        <h3>View Appointments</h3>
+        <p>Check patient appointment requests</p>
+    </div>
+
+    <div class="card" onclick="openPage('doctor/writePrescriptions.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
+        <h3>Write Prescription</h3>
+        <p>Create prescription for patients</p>
+    </div>
+
+    <div class="card" onclick="openPage('doctor/doctorProfile.html')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png">
+        <h3>My Profile</h3>
+        <p>View and update personal details</p>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment - e-EYECARE</title>
+    <link rel="stylesheet" href="bookAppointments.css">
+</head>
+<body>
+<div class="container">
+    <h2>Book Appointment</h2>
+
+   <form id="appointmentForm" 
+      action="/e-EYECARES/AppointmentsServlet" 
+      method="post">
+
+    <label>Select Doctor</label>
+    <select id="doctorSelect" name="doctorId" required onchange="loadSlots()">
+        <option value="">-- Select Doctor --</option>
+    </select>
+
+    <label>Select Slot</label>
+    <select id="slotSelect" name="slotId" required>
+        <option value="">-- Select Slot --</option>
+    </select>
+
+    <label>Problem Description</label>
+    <textarea id="problem" name="problem" required></textarea>
+
+    <button type="submit" class="primary-btn">Book Appointment</button>
+
+</form>
+
+
+<a href="dashboard.html" class="back-btn">
+    Back to Dashboard
+</a>
+
+    <p id="message"></p>
+</div>
+
+<script src="bookAppointments.js"></script>
+</body>
+</html>

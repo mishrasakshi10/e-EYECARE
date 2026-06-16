@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile | e-EYECARE</title>
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="/e-EYECARES/patient/patientProfiles.css">
+
+<script src="/e-EYECARES/patient/patientProfile.js" defer></script>
+
+
+</head>
+<body>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>e-EYECARE</h2>
+            <span>Patient Panel</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/e-EYECARES/patient/dashboard.html">Dashboard</a></li>
+            <li class="active"><a href="/e-EYECARES/patient/patientProfile.html">My Profile</a></li>
+            <li><a href="/e-EYECARES/patient/bookAppointments.html">Book Appointment</a></li>
+            <li><a href="/e-EYECARES/patient/viewAppointments.html">My Appointments</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="welcome-text">
+                Welcome, <span id="nameHeader">Patient</span>
+            </div>
+
+            <div class="top-actions">
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+                    Dark Mode
+                </label>
+            </div>
+        </header>
+
+        <!-- Profile Card -->
+        <section class="profile-section">
+            <div class="profile-card">
+
+                <div class="profile-left">
+                    <img id="profileImage" src="/e-EYECARES/images/user-avatar.png" alt="Patient Image" class="profile-img">
+                </div>
+
+                <div class="profile-right">
+                    <h2 id="name">Loading...</h2>
+
+                    <div class="info-group">
+                        <label>Email</label>
+                        <p id="email">Loading...</p>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Phone</label>
+                        <p id="phone">Loading...</p>
+                    </div>
+
+                    
+
+                    <div class="button-group">
+                        <button class="primary-btn" onclick="editProfile()">Edit Profile</button>
+                        <button class="secondary-btn" onclick="changePassword()">Change Password</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
